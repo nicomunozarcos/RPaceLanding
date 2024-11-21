@@ -10,7 +10,6 @@ Este proyecto incluye una landing page construida con **Django** y un componente
 1. Clonar este repositorio:
     ```bash
     git clone <URL>
-    cd PRUEBARACEPACE
     ```
 
 2. Crear un entorno virtual de Python:
