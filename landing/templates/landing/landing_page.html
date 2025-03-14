@@ -1,0 +1,265 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block title %}RacePace - Tu entrenador de carrera de montaña{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h1>
+                <span class="gradient-text" data-i18n="hero.title.part1">Tu entrenador AI</span>
+                <br>
+                <span data-i18n="hero.title.part2">de carrera de montaña</span>
+            </h1>
+            <p data-i18n="hero.description">Obtén planes de entrenamiento personalizados basados en tu nivel de condición física, objetivos y condiciones del terreno. Impulsado por IA avanzada.</p>
+            <a href="#" class="cta-button" data-i18n="hero.cta">Obtén tu plan de carrera</a>
+        </div>
+        <div class="hero-images">
+            <div class="hero-image">
+                <img src="../static/imgs/Hill Climbing.png" alt="Corredores de montaña">
+            </div>
+            <div class="hero-image2">
+                <img src="../static/imgs/Mobile Image.png" alt="Móviles">
+            </div>
+        </div>
+    </div>
+    <div class="container brands">
+        <img src="../static/imgs/Brands.png" alt="Marcas">
+    </div>
+</section>
+<section id="features" class="features">
+    <div class="container">
+        <h2 data-i18n="features.title">Nuestras Características</h2>
+        <p class="features-subtitle" data-i18n="features.subtitle">¡Esto es lo que obtendrás con cada plan de carrera!</p>
+        
+        <div class="features-showcase">
+            <div class="feature-panel">
+                <img src="../static/imgs/Features-predictions.png" alt="Predicción de tiempos" class="feature-image">
+                <h3 data-i18n="features.prediction.title">Predicción de Tiempos</h3>
+                <p data-i18n="features.prediction.description">Análisis detallado de tus tiempos estimados por segmento</p>
+            </div>
+            <div class="feature-panel">
+                <img src="../static/imgs/Features-planning.png" alt="Planificación nutricional" class="feature-image">
+                <h3 data-i18n="features.nutrition.title">Plan Nutricional</h3>
+                <p data-i18n="features.nutrition.description">Guía personalizada de nutrición para cada etapa de tu carrera</p>
+            </div>
+            
+            <div class="feature-panel">
+                <img src="../static/imgs/Features-essentials.png" alt="Esenciales de carrera" class="feature-image">
+                <h3 data-i18n="features.essentials.title">Esenciales de Carrera</h3>
+                <p data-i18n="features.essentials.description">Todo lo que necesitas saber sobre el terreno y las condiciones</p>
+            </div>
+        </div>
+
+        <div class="weather-conditions">
+            <h3 data-i18n="weather.title">Condiciones del Terreno</h3>
+            <div class="weather-forecast">
+                <div class="weather-day">
+                    <span data-i18n="weather.friday">Viernes</span>
+                    <i class="weather-icon">🌧️</i>
+                    <span>18°</span>
+                </div>
+                <div class="weather-day">
+                    <span data-i18n="weather.saturday">Sábado</span>
+                    <i class="weather-icon">⛅</i>
+                    <span>19°</span>
+                </div>
+                <div class="weather-day">
+                    <span data-i18n="weather.sunday">Domingo</span>
+                    <i class="weather-icon">☀️</i>
+                    <span>22°</span>
+                </div>
+                <div class="weather-day">
+                    <span data-i18n="weather.monday">Lunes</span>
+                    <i class="weather-icon">☀️</i>
+                    <span>23°</span>
+                </div>
+                <div class="weather-day">
+                    <span data-i18n="weather.tuesday">Martes</span>
+                    <i class="weather-icon">🌥️</i>
+                    <span>24°</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="basic-features">
+    <div class="container">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🗺️</div>
+                <h3 data-i18n="basicFeatures.ai.title">Planificación de rutas con IA</h3>
+                <p data-i18n="basicFeatures.ai.description">Algoritmos inteligentes que analizan el terreno, la elevación y el clima para crear rutas óptimas.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 data-i18n="basicFeatures.tracking.title">Seguimiento en tiempo real</h3>
+                <p data-i18n="basicFeatures.tracking.description">Monitorea tu progreso con seguimiento GPS avanzado y métricas de rendimiento.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3 data-i18n="basicFeatures.recovery.title">Recuperación inteligente</h3>
+                <p data-i18n="basicFeatures.recovery.description">Planes de recuperación personalizados basados en la intensidad de tu entrenamiento y tus objetivos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="demo" class="video-section">
+    <div class="container">
+        <h2 class="video-title">
+            <span data-i18n="demo.title.part1">How do I get my</span> <span class="highlight" data-i18n="demo.title.part2">Personalized Plan?</span>
+        </h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gibyEUfNjHg?si=05-fO-gFM5zakk-o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+<section class="testimonials">
+    <div class="container">
+        <h2 data-i18n="testimonials.title">Lo que dicen nuestros usuarios</h2>
+        <div class="testimonials-carousel">
+            <button class="carousel-arrow prev">&#10094;</button>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="../static/imgs/user1.png" alt="Usuario" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <div class="stars">★★★★★</div>
+                            <div class="user-info" data-i18n="testimonials.user1">Ana García, BCN</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text" data-i18n="testimonials.text1">"La app ha mejorado significativamente mi planificación de carreras."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="../static/imgs/user2.png" alt="Usuario" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <div class="stars">★★★★★</div>
+                            <div class="user-info" data-i18n="testimonials.user2">Carlos Ruiz, MAD</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text" data-i18n="testimonials.text2">"Me encanta la simplicidad y efectividad de esta herramienta."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="../static/imgs/user3.png" alt="Usuario" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <div class="stars">★★★★★</div>
+                            <div class="user-info" data-i18n="testimonials.user3">Laura Martín, VAL</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text" data-i18n="testimonials.text3">"Altamente recomendable para cualquiera que tenga problemas planificando su estrategia de carrera."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="../static/imgs/user4.png" alt="Usuario" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <div class="stars">★★★★★</div>
+                            <div class="user-info" data-i18n="testimonials.user4">Miguel Sánchez, SEV</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text" data-i18n="testimonials.text4">"Esta aplicación ha revolucionado la forma en que planeo mi desarrollo profesional."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="../static/imgs/user5.png" alt="Usuario" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <div class="stars">★★★★★</div>
+                            <div class="user-info" data-i18n="testimonials.user5">Elena Rodríguez, BIL</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text" data-i18n="testimonials.text5">"Increíblemente útil para establecer y seguir mis metas profesionales a largo plazo."</p>
+                </div>
+            </div>
+            <button class="carousel-arrow next">&#10095;</button>
+        </div>
+        <div class="carousel-dots"></div>
+    </div>
+</section>
+<section class="comparison">
+    <div class="container">
+        <h2><span data-i18n="comparison.title">¿Qué hace a RacePace</span>&nbsp;<span class="highlight" data-i18n="comparison.highlight"> la mejor opción</span>?</h2>
+        
+        <div class="comparison-table">
+            <div class="comparison-header">
+                <div data-i18n="comparison.benefits">Beneficios</div>
+                <div>RacePace</div>
+                <div data-i18n="comparison.others">Otros</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div data-i18n="comparison.training">Guía de Entrenamiento</div>
+                <div>✓</div>
+                <div>✓</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div data-i18n="comparison.injury">Prevención de Lesiones</div>
+                <div>✓</div>
+                <div>✓</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div data-i18n="comparison.plans">Planes de Carrera Personalizados</div>
+                <div>✓</div>
+                <div>✗</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div data-i18n="comparison.pace">Estrategia de Ritmo Personalizada</div>
+                <div>✓</div>
+                <div>✗</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div data-i18n="comparison.nutrition">Plan de Nutrición e Hidratación</div>
+                <div>✓</div>
+                <div>✗</div>
+            </div>
+            
+            <div class="comparison-row">
+                <div data-i18n="comparison.equipment">Recomendación de Equipamiento</div>
+                <div>✓</div>
+                <div>✗</div>
+            </div>
+        </div>
+        
+        <div class="comparison-footer">
+            <button class="cta-button" data-i18n="comparison.cta">Empezar Ahora</button>
+            <div class="rating">
+                <div class="stars">★★★★★</div>
+                <p data-i18n="comparison.rating">Más de 150 reseñas de 5 estrellas online.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about" class="about-us-wrapper">
+    <div class="about-us-card">
+        <h2 class="about-title" data-i18n="about.title">About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <div class="profile-header">
+                    <img src="{% static 'imgs/About Us-ido.png' %}" alt="Ido Dassa" class="profile-avatar">
+                    <div class="profile-info">
+                        <span class="profile-name" data-i18n="about.name">Ido Dassa</span>
+                        <span class="profile-subtitle" data-i18n="about.subtitle">Professional Ultra Marathoner</span>
+                    </div>
+                </div>
+                <blockquote class="about-quote" data-i18n="about.quote">
+                    As a professional ultramarathoner and trail runner, I've faced the challenges of creating custom race strategies. The hours spent analyzing race routes, past results, physical capabilities, equipment, and weather can be overwhelming. Often, we lack the time and resources to develop an effective race plan, leading to disappointing race outcomes. My own memories are filled with the races I didn't finish or perform well in, and the frustration that followed.
+                </blockquote>
+                <p class="about-mission" data-i18n="about.mission">
+                    Understanding the dedication you put into training, we founded RacePace to help you achieve your goals with precision and confidence.
+                </p>
+                <p class="team-signature" data-i18n="about.signature">-RacePace Team</p>
+            </div>
+            <div class="about-image">
+                <img src="{% static 'imgs/About Us.png' %}" alt="Runner at finish line">
+                <span class="success-badge" data-i18n="about.badge">Race Day Success</span>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

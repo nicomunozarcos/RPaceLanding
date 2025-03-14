@@ -1,0 +1,15 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block title %}Posts - RacePace{% endblock %}
+
+{% block content %}
+<section class="timeline2">
+        <div id="react-root"></div> 
+</section>    
+{% endblock %}
+
+<!-- Incluye el archivo JavaScript generado por React -->
+{% block scripts %}
+    <script src="{% static 'js/posts_bundle.js' %}"></script>
+{% endblock %}

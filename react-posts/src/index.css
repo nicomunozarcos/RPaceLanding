@@ -1,0 +1,210 @@
+.react-app {
+  --background-color: transparent;
+  --card-background: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --accent-color: #0095f6;
+  --hover-color: #f0f0f0;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.react-app .container2 {
+  max-width: 935px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.react-app .timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 700px;
+}
+
+.react-app .card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 700px;
+}
+
+.react-app .card-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.react-app .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  margin-right: 12px;
+}
+
+.react-app .avatar img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.react-app .card-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.react-app .card-subtitle {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.react-app .card-image {
+  padding: 10px; 
+  box-sizing: border-box; 
+}
+
+.react-app .card-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; 
+}
+
+.react-app .card-content {
+  padding: 12px 16px;
+}
+
+.react-app .card-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.react-app .card-description {
+  font-size: 14px;
+  margin: 0;
+}
+
+.react-app .card-actions {
+  border-top: 1px solid var(--border-color);
+  padding: 8px 16px;
+  display: flex;
+  gap: 16px;
+}
+
+.react-app .action-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-primary);
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.react-app .action-button:hover {
+  background-color: var(--hover-color);
+}
+
+.react-app .action-button span {
+  margin-right: 8px;
+}
+
+.react-app .sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 500px;
+}
+
+.react-app .sidebar-card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.react-app .sidebar-header {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.react-app .sidebar-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.react-app .sidebar-content {
+  padding: 12px 16px;
+}
+
+.react-app .friend-item,
+.react-app .route-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.react-app .friend-name,
+.react-app .route-name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.react-app .route-stats {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.react-app .follow-button,
+.react-app .view-all-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--accent-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .react-app .container2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .react-app .timeline {
+    width: 100%;
+  }
+
+  .react-app .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .react-app .sidebar {
+    display: none;
+  }
+}

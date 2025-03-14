@@ -1,0 +1,28 @@
+
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block title %}Registrarse - RacePace{% endblock %}
+
+{% block content %}
+<section class="signup">
+    <div class="auth-card">
+        <h2 data-i18n="signup.text">Registrarse</h2>
+        <form>
+            <div class="form-group">
+                <label for="username" data-i18n="username.text">Nombre de usuario</label>
+                <input type="text" id="username" placeholder="Your username" required>
+            </div>
+            <div class="form-group">
+                <label for="email" data-i18n="email.text">Correo electrónico</label>
+                <input type="email" id="email" placeholder="Your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password" data-i18n="password.text">Contraseña</label>
+                <input type="password" id="password" placeholder="Your password" required>
+            </div>
+            <button type="submit" data-i18n="signup.text">Registrarse</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

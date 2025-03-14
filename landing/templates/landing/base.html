@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}RacePace{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.a58449d5.css' %}">
+</head>
+<body>  
+<header>
+    <nav class="container">
+        <a href="/"class="logo">
+            <img src="{% static 'imgs/Race Pace logo SVG 1.png' %}" alt="RacePace Logo">
+        </a>
+          <div class="nav-links">
+              <a href="/#features" data-i18n="nav.features">Características</a>
+              <a href="/#demo" data-i18n="nav.demo">Demo</a>
+              <a href="/#about" data-i18n="nav.about">Acerca de</a>
+              <a href="#contact" data-i18n="nav.contact">Contacto</a>
+              <span class="nav-separator"></span>
+          </div>
+          <div>
+              <a href="/posts" class="nav-button" data-i18n="nav.posts">Posts</a>
+          </div>
+              <button id="langToggle" class="lang-toggle">
+                  <img src="{% static 'imgs/spain-flag.jpg' %}" alt="Español" class="flag-icon" id="es-flag">
+                  <img src="{% static 'imgs/uk-flag.png' %}" alt="English" class="flag-icon" id="en-flag" style="display:none;">
+              </button>
+          <div class="nav-actions">
+              <a href="/login" class="nav-button2" data-i18n="nav.login">Iniciar Sesión</a>
+              <a href="/signup" class="nav-button2" data-i18n="nav.signup">Registrarse</a>
+          </div>
+          <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    </nav>
+</header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <div id="chat-widget" class="chat-widget">
+      <button id="chat-toggle" class="chat-toggle" aria-label="Toggle chat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </button>
+      <div id="chat-container" class="chat-container">
+        <div class="chat-sidebar">
+          <button id="faq-toggle" class="sidebar-toggle">FAQ</button>
+          <button id="races-toggle" class="sidebar-toggle">Recommended Races</button>
+          <div id="faq-container" class="sidebar-content">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-item">
+              <h4>What exactly is a Personalized Race Day Plan?</h4>
+              <p>A Personalized Race Day Plan is a custom-made strategy that helps trail runners prepare for their races by considering their current fitness levels and specific race goals. It includes training plans, race-day tactics, nutrition advice, mandatory gear recommendations, and weather conditions.</p>
+            </div>
+            <div class="faq-item">
+              <h4>Can the Elevated Race Strategy adapt if my goals or the race details change?</h4>
+              <p>Yes, the Elevated Race Strategy can adapt to changes in your goals or race details. The plan can be adjusted based on new information or evolving needs to ensure it remains effective.</p>
+            </div>
+            <div class="faq-item">
+              <h4>How personalized are the training plans and race strategies?</h4>
+              <p>The training plans and race strategies are highly personalized, taking into account your current fitness level, race goals, and individual needs to create a tailored approach.</p>
+            </div>
+            <div class="faq-item">
+              <h4>How will you know my current fitness?</h4>
+              <p>We assess your current fitness through detailed information you provide, including past performance, training data, and any specific metrics relevant to your race goals.</p>
+            </div>
+          </div>
+          <div id="races-container" class="sidebar-content">
+            <h3>Recommended Races</h3>
+            <div id="race-rankings">
+              <!-- Example content for races -->
+              <div class="race-item">
+                <h4>Mountain Ultra 2024</h4>
+                <p>Difficulty: Hard</p>
+                <p>Location: Colorado, USA</p>
+              </div>
+              <div class="race-item">
+                <h4>Desert Trail Marathon</h4>
+                <p>Difficulty: Medium</p>
+                <p>Location: Nevada, USA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-main">
+          <div class="chat-header">
+            <div class="chat-avatar">
+              <img class="chatbotimage" src="../static/imgs/chatbot.png" alt="Chatbot Avatar">
+            </div>
+            <h2>Race Recommendation Chatbot</h2>
+            <button id="chat-close" class="chat-close" aria-label="Close chat">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+          <div id="chat-messages" class="chat-messages"></div>
+          <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Ask about races...">
+            <button onclick="sendMessage()">Send</button>
+          </div>
+          <div class="quick-answers">
+            <button onclick="quickAnswer('What is a Personalized Race Day Plan?')">Personalized Race Day Plan</button>
+            <button onclick="quickAnswer('Can the strategy adapt to changes?')">Strategy Adaptation</button>
+            <button onclick="quickAnswer('How personalized are the plans?')">Personalization Level</button>
+            <button onclick="quickAnswer('How do you assess my fitness?')">Fitness Assessment</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+      <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="{% static 'imgs/Race Pace logo SVG 2.png' %}" alt="RacePace Logo">
+                </div>
+                <div class="newsletter">
+                    <p data-i18n="footer.subscribe">Subscribe to our newsletter:</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email here" data-i18n="footer.emailPlaceholder">
+                        <button class="arrow-button">→</button>
+                    </div>
+                </div>
+                <p class="copyright" data-i18n="footer.copyright">© 2024 RacePace Inc. All rights reserved.</p>
+            </div>
+            <div id="contact" class="footer-right">
+                <h3 data-i18n="footer.contactTitle">Contact us</h3>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" data-i18n="footer.namePlaceholder">
+                    <input type="email" placeholder="Your Email" data-i18n="footer.emailPlaceholder">
+                    <textarea placeholder="Your Message" data-i18n="footer.messagePlaceholder"></textarea>
+                    <button type="submit" data-i18n="footer.sendButton">Send</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" class="social-icon instagram"><img src="{% static 'imgs/instagram.png' %}" alt="Instagram"></a>
+                    <a href="#" class="social-icon youtube"><img src="{% static 'imgs/youtube.png' %}" alt="YouTube"></a>
+                    <a href="#" class="social-icon facebook"><img src="{% static 'imgs/facebook.png' %}" alt="Facebook"></a>
+                    <a href="#" class="social-icon email"><img src="{% static 'imgs/email.png' %}" alt="Email"></a>
+                    <a href="#" class="social-icon linkedin"><img src="{% static 'imgs/linkedin.png' %}" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/landing.js' %}"></script>
+    <script src="{% static 'js/posts_bundle.js' %}"></script>
+</body>
+</html>
