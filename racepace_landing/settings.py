@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)#4q&xe52&4u!x39jnp0%1m^ou6zh&c!pwo9^+)v4#m1e_w$sf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://rpacelanding.onrender.com/', 'rpacelanding.onrender.com', 'localhost','127.0.0.1']
+ALLOWED_HOSTS = ['rpacelanding.onrender.com/', 'rpacelanding.onrender.com', 'localhost','127.0.0.1']
 CORS_ALLOW_ALL_ORIGINS = True
 
 
